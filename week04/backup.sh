@@ -1,0 +1,23 @@
+
+#!/bin/bash
+cd "$(dirname "$0")" || exit 1
+SOURCE_DIR=${1:-test}
+BACKUP_DIR="backups"
+TODAY=$(date +%Y%m%d_%H%M%S)
+FILENAME="${TODAY}_$$.tar.gz"
+if [ ! -d "$SOURCE_DIR" ]; then
+  echo "오류: '$SOURCE_DIR' 디렉터리가없습니다."
+  exit 1
+fi
+mkdir -p "$BACKUP_DIR" || exit 1
+echo "백업시작: $SOURCE_DIR → $BACKUP_DIR/$FILENAME"
+tar -czf "$BACKUP_DIR/$FILENAME" "$SOURCE_DIR"
+if [ $? -eq 0 ]; then
+SIZE=$(du -sh "$BACKUP_DIR/$FILENAME" | cut -f1)
+echo "백업완료! (크기: $SIZE)"
+else
+  echo "백업실패"
+  exit 1
+fi
+echo "현재 보관 중인 백업:"
+ls -1 "$BACKUP_DIR"
