@@ -142,4 +142,7 @@ docker run -d -p 8080:5000 -e APP_TITLE="우리 반 방명록" --name gb guestbo
 ```
 
 > 한 줄 요약: **코드**는 이미지에 박힌 값, **ENV**는 이미지의 기본값, **`-e`**는 실행할 때 바꾸는 값이다.
+
+ghcr.io/dain1022/guestbook:v2 : 내 이미지 주소
+4곳 이상 커스텀해보기
 <img width="623" height="595" alt="스크린샷 2026-10-23 160426" src="https://github.com/user-attachments/assets/f3a9a63d-1631-4d4a-b305-dfdb3748e72b" />
