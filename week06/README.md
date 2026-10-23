@@ -64,6 +64,8 @@ docker images               # 삭제됐는지 확인
 
 ### 2. 실습: 친구와 이미지 공유하기
 
+<img width="572" height="395" alt="스크린샷 2026-10-23 162259" src="https://github.com/user-attachments/assets/7e8afae3-9a87-4c58-b35a-777ee96c95d5" />
+
 #### 1) 실습 순서
 
 ```bash
